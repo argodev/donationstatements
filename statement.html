@@ -1,0 +1,132 @@
+<html>
+<head>
+<style>
+    @page {
+        size: letter portrait;
+        
+        @frame org_address_frame {
+            -pdf-frame-content: org_address;
+            left: 50pt; width: 175pt; top: 70pt; height: 75pt;
+        }
+        @frame logo_frame {
+            -pdf-frame-content: logo_content;
+            left: 225pt; width: 310pt; top: 50pt; height: 75pt;
+        }
+        @frame title_frame {
+            -pdf-frame-content: title_content;
+            left: 225pt; width: 337pt; top: 125pt; height: 75pt;
+        }
+        @frame donor_address_frame {
+            -pdf-frame-content: donor_address;
+            left: 50pt; width: 206pt; top: 175pt; height: 200pt;
+        }
+        @frame thankyou_frame {
+            -pdf-frame-content: thankyou_content;
+            left: 306pt; width: 256pt; top: 175pt; height: 200pt;
+        }
+        @frame content_frame {
+            left: 50pt; width: 512pt; top: 290pt; height: 397pt;
+        }
+        @frame disclaimer_frame {
+            -pdf-frame-content: disclaimer_content;
+            left: 50pt; width: 512pt; top: 570pt; height: 30pt;
+        }
+    }
+
+    body { font-family: Verdana, Arial, sans-serif; font-size: 1.2em;}
+    .orgaddress { font-size: 1.0em; }
+    .orgname { font-weight: bold; }
+    .donoraddress { font-size: 1.2em; }
+    .donorname { font-weight: bold; }
+    .disclaimer {
+        font-size: 0.9em;
+        font-style: italic;
+        color: gray;
+    }
+    .title { text-align: right; }
+    .pagetitle {font-weight: bold; font-size: 2.0em;}
+    .detail { font-weight: bold; font-size: 1.5em;}
+    div.header { text-align: right; }
+    div.thankyou {
+        border: 2pt solid lightgray;
+        padding: 5px;
+    }
+    table { width: 100%; 
+        /* border-collapse: collapse; */
+    }
+    tr.header {
+        border-bottom: 2pt solid lightgray;
+        text-align: left;
+    }
+    tr.firstrow { padding-top: 2px; }
+    .headerleft { text-align: left; }
+    .headerright { text-align: right; }
+    td.amount { text-align: right; }
+    td.total {
+        text-align: right;
+        font-weight: bold;
+    }
+    tr.footer { border-top: 2pt solid lightgray; padding-top: 2pt;}
+</style>
+</head>
+<body>
+
+    <div id="org_address" class="orgaddress">
+        <span class="orgname">Bakeroos</span><br>
+        6907 Texas Valley Rd<br>
+        Knoxville, TN 37938<br>
+    </div>
+
+    <div id="donor_address" class="donoraddress">
+        <span class="donorname">{{donor_name}}</span><br>
+        {% if address|length %}
+        {{address}}<br>
+        {{city}}, {{state}} {{zip}}<br>
+        {% endif %}
+        {% if email|length %}
+        {{email}}
+        {% endif %}
+    </div>
+
+    <div id="logo_content" class="header">
+        <img src="bakeroos-logo-small.png" />
+    </div>
+
+    <div id="title_content" class="title">
+        <span class="pagetitle">Giving Statement</span><br>
+        01/01/2023 to 12/31/2023
+    </div>
+
+    <div id="thankyou_content">
+    <div class="thankyou">We want to sincerely thank you for your generosity to our ministry. Your support 
+         contributed to furthering our mission of giving hope, through the gift of a 
+            homemade birthday cake, to children who otherwise may not receive one. Your 
+            generosity will help us to continue this mission into the year 2024.</div>
+    </div>
+
+    <div id="disclaimer_content">
+        <div class="disclaimer">No goods or services were provided in exchange for the contributions listed here. 
+        Bakeroos is an exempt organization as described in Section 501(c)(3) of
+        the Internal Revenue Code; EIN 88-3906836.</div>
+    </div>
+
+
+    <!-- HTML Content -->
+    <span class="detail">Detail</span>
+    <table>
+        <tr class="header">
+            <th class="headerleft">Gift Date</th>
+            <th class="headerright">Amount</th>                
+        </tr>
+        {% for donation in donations %}
+        {% if loop.index == 1 %}
+        <tr class="firstrow"><td>{{ donation[0] }}</td><td class="amount">{{ donation[1] }}</td></tr>
+        {% else %}
+        <tr><td>{{ donation[0] }}</td><td class="amount">{{ donation[1] }}</td></tr>
+        {% endif %}
+        {% endfor %}
+        <tr class="footer"><td></td><td class="total">{{ total }}</td></tr>
+    </table>
+
+</body>
+</html>

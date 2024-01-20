@@ -86,23 +86,3 @@ A normal use case would look something like the following:
 ```bash
 python3 genreports.py --email --sender user@gmail.com --senderdisp 'Financial Department' --senderpw myS3cr3t!
 ```
-
-
-
-
-## Miscellaney
-
-``` text
-[2024-01-20 16:08:44,538] WARNING NOTE: Must mail report for Amazon Smile
-[2024-01-20 16:08:48,294] WARNING NOTE: Must mail report for Berridge, Jenny
-[2024-01-20 16:08:50,565] WARNING NOTE: Must mail report for Buckner, Sandra
-[2024-01-20 16:08:50,601] WARNING NOTE: Must mail report for Burr Woolridge, Dainna
-[2024-01-20 16:08:54,065] WARNING NOTE: Must mail report for Delp, Carol
-[2024-01-20 16:08:54,101] WARNING NOTE: Must mail report for Dodson, Kim
-[2024-01-20 16:08:58,692] WARNING NOTE: Must mail report for Giver, Unknown
-[2024-01-20 16:09:05,832] WARNING NOTE: Must mail report for Lam, Brittney
-[2024-01-20 16:09:05,866] WARNING NOTE: Must mail report for Little, Kayla
-[2024-01-20 16:09:08,131] WARNING NOTE: Must mail report for Matyac, Cathy
-[2024-01-20 16:09:08,164] WARNING NOTE: Must mail report for Matyac, Mary
-[2024-01-20 16:09:10,616] WARNING NOTE: Must mail report for Mesa
-```

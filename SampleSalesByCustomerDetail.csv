@@ -1,0 +1,20 @@
+Sales by Customer Detail,,,,,,,,,,
+1 Jan - 31 Dec 2023,,,,,,,,,,
+
+,Customer,Date,Transaction type,Num,Product/Service,Description,Quantity,Rate,Amount,Balance
+"User, Sample",,,,,,,,,,
+,"User, Sample",01/02/2023,Sales Receipt,1111,Donation,Money in to PayPal,1,$53.04,$53.04,$53.04
+,"User, Sample",02/02/2023,Sales Receipt,1094,Donation,--,--,--,$53.04,$106.08
+,"User, Sample",03/01/2023,Sales Receipt,1203,Donation,--,--,--,$53.04,$159.12
+,"User, Sample",04/01/2023,Sales Receipt,1215,Donation,--,--,--,$53.04,$212.16
+,"User, Sample",05/02/2023,Sales Receipt,1235,Donation,Money in to PayPal,1,$53.04,$53.04,$265.20
+,"User, Sample",06/06/2023,Sales Receipt,1248,Donation,Money in to PayPal,1,$53.04,$53.04,$318.24
+,"User, Sample",07/02/2023,Sales Receipt,1262,Donation,Money in to PayPal,1,$53.04,$53.04,$371.28
+,"User, Sample",08/02/2023,Sales Receipt,1285,Donation,Money in to PayPal,1,$53.04,$53.04,$424.32
+,"User, Sample",09/02/2023,Sales Receipt,1294,Donation,Money in to PayPal,1,$53.04,$53.04,$477.36
+,"User, Sample",10/02/2023,Sales Receipt,1303,Donation,Money in to PayPal,1,$53.04,$53.04,$530.40
+,"User, Sample",11/02/2023,Sales Receipt,1320,Donation,Money in to PayPal,1,$53.04,$53.04,$583.44
+,"User, Sample",12/02/2023,Sales Receipt,1328,Donation,Money in to PayPal,1,$53.04,$53.04,$636.48
+"Total for User, Sample",,,,,,,,,$636.48,
+
+"Friday, January 19, 2024 11:01 PM UTC",,,,,,,,,,
