@@ -162,5 +162,8 @@ cython_debug/
 
 # ensure we don't accidently commit files that have personal info
 reports/*.pdf
+reports_2023
 CustomerContactList.csv
+CustomerContactList_2023.csv
 SalesByCustomerDetail.csv
+SalesByCustomerDetail_2023.csv

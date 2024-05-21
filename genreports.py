@@ -20,13 +20,13 @@ from email.utils import formataddr
 # CONSTANTS
 GMAIL_SMTP_SSL = 'smtp.gmail.com'
 GMAIL_SMTP_PORT = 465
-EMAIL_SUBJECT = '2023 Giving Statement'
+EMAIL_SUBJECT = '2024 Giving Statement'
 EMAIL_BODY = "We want to sincerely thank you for your generosity to our " \
             + "ministry. Your support contributed to furthering our mission of " \
             + "giving hope, through the gift of a homemade birthday cake, " \
             + "to children who otherwise may not receive one. Your " \
             + "generosity will help us to continue this mission into the year "\
-            +" 2024. Your 2023 giving summary is attached."
+            +" 2025. Your 2024 giving summary is attached."
 
 
 def send_report_email(email, filename, sender_email, sender_display, sender_password):
